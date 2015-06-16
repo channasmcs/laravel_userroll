@@ -149,6 +149,7 @@ class MyauthMiddleware {
 
 }
 ?>
+
 Now, before we can use our Middleware in any route declaration, we need to add it it in the app/Http/Kernel.php file and by default, there are already other middlewares added in that file by Laravel in the $routeMiddleware array and it looks like this:
 
 <?php namespace App\Http;
@@ -187,11 +188,13 @@ class Kernel extends HttpKernel {
 ?>
 
 then add this __construct file instand Auth on your controller
+<?php
 public function __construct()
 	{
   //	$this->middleware('guest');
 		$this->middleware('Myauth');
 	}
+?>
 
 then login ussing 
 
