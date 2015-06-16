@@ -188,13 +188,40 @@ class Kernel extends HttpKernel {
 ?>
 
 then add this __construct file instand Auth on your controller
-<?php
-public function __construct()
+<?php namespace App\Http\Controllers;
+
+class WelcomeController extends Controller {
+
+	/*
+	|--------------------------------------------------------------------------
+	| Welcome Controller
+	|--------------------------------------------------------------------------
+	|
+	| This controller renders the "marketing page" for the application and
+	| is configured to only allow guests. Like most of the other sample
+	| controllers, you are free to modify or remove it as you desire.
+	|
+	*/
+
+	/**
+	 * Create a new controller instance.
+	 *
+	 * @return void
+	 */
+	public function __construct()
 	{
-  //	$this->middleware('guest');
-		$this->middleware('Myauth');
+		$this->middleware('guest');
 	}
-?>
+
+//public  function __construct()
+//{
+     //$this->middleware('guest');
+//    $this->middleware('Myauth');
+//}
+
+
+}
+
 
 then login ussing 
 
