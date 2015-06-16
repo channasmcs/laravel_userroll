@@ -116,8 +116,6 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `role_id`, `name`, `email`, `password`, `first_name`, `last_name`, `remember_token`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 1, 'channa', 'channa@gmail.com', '$2y$10$FnikWUPOqDc67Jd/YjzFsONOi9C0Reu41KgnCcYE2luwYhmS/tnMO', '', '', 'KUu1rYQg8pWUQ8Go052e3IqUACgncMKLGq9loRgXc7Rq0gRhVhrPgFXs9I4t', '2015-06-15 04:37:18', '2015-06-15 06:32:27', NULL);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
