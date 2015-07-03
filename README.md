@@ -1,5 +1,7 @@
 ## Laravel PHP Framework ADD USER_ROLL BY CHANNASMCS
 
+[![about me](http://1.bp.blogspot.com/-uCbV5XHcLO4/VAbzG1il9LI/AAAAAAAAAUQ/yMPccsaNa3o/s1600/wonder-logo.png)](http://channasmcs.blogspot.com/)<br/>
+
 hi guy i make simple user ahtunticate methode usring   MIDDLEWARE  & i add user roles to access provilages 
 
 this is simple prototype i hope this will help to you 
