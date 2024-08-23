@@ -19,6 +19,7 @@ DATABASE MIGRATION FOR users TABLE:
 ```
 php artisan make:migration create_users_table
 ```
+```
 <?php
 
 use Illuminate\Database\Schema\Blueprint;
@@ -62,10 +63,12 @@ class CreateUsersTable extends Migration {
 
 }
 ?>
-
+```
 DATABASE MIGRATION FOR roles TABLE:
+```
 php artisan make:migration create_roles_table
-
+```
+```
 <?php
 
 use Illuminate\Database\Schema\Blueprint;
@@ -103,10 +106,10 @@ class CreateRolesTable extends Migration {
 
 }
 ?>
-
+```
 These tables are required to build the ACL fields could be changed (add/remove) but to build the relationship between tables we need foreign keys and we can’t remove those fields such as role_id in users table and the pivot table is also necessary as it is.
 Now, we need to create the middleware class to check the user permissions and we can create it using php artisan make:middleware MyauthMiddleware  from command line/terminal. This will create a skeleton of a middleware class in app/Http/Middleware directory as MyauthMiddleware.php and now we need to edit that class as given below:
-
+```
 <?php namespace App\Http\Middleware;
 
 use Closure;
@@ -158,9 +161,9 @@ class MyauthMiddleware {
 
 }
 ?>
-
+```
 Now, before we can use our Middleware in any route declaration, we need to add it it in the app/Http/Kernel.php file and by default, there are already other middlewares added in that file by Laravel in the $routeMiddleware array and it looks like this:
-
+```
 <?php namespace App\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
@@ -195,8 +198,9 @@ class Kernel extends HttpKernel {
 
 }
 ?>
-
+```
 then add this __construct file instand Auth on your controller
+```
 <?php namespace App\Http\Controllers;
 
 class WelcomeController extends Controller {
@@ -227,7 +231,7 @@ class WelcomeController extends Controller {
 
 
 }
-
+```
 
 then login ussing 
 
