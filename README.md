@@ -16,7 +16,9 @@ TO IMPLEMENT THIS, WE NEED 2 TABLES:
 2. roles
 
 DATABASE MIGRATION FOR users TABLE:
+```
 php artisan make:migration create_users_table
+```
 <?php
 
 use Illuminate\Database\Schema\Blueprint;
